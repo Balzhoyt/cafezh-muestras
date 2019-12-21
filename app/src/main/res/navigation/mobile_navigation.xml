@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_capturarMuestra">
+
+    <fragment
+        android:id="@+id/nav_capturarMuestra"
+        android:name="com.balzhoyt.cafezh.muestras.ui.inicio.CapturarImagenInicioFragment"
+        android:label="@string/mnu_inicio"
+        tools:layout="@layout/fragment_inicio_capturas" />
+
+    <fragment
+        android:id="@+id/nav_galeria"
+        android:name="com.balzhoyt.cafezh.muestras.ui.gallery.GalleryFragmentMnu"
+        android:label="@string/mnu_galeria"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_chat"
+        android:name="com.balzhoyt.cafezh.muestras.ui.chat.chatFragment"
+        android:label="@string/mnu_chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/nav_configuracion"
+        android:name="com.balzhoyt.cafezh.muestras.ui.configuracion.ConfiguracionFragment"
+        android:label="@string/mnu_Configuracion"
+        tools:layout="@layout/fragment_configuracion" />
+
+    <fragment
+        android:id="@+id/nav_subirFotos"
+        android:name="com.balzhoyt.cafezh.muestras.ui.enviar.EnviarImagenesFragment"
+        android:label="@string/mnu_enviar"
+        tools:layout="@layout/fragment_enviar_imagenes" />
+
+    <fragment
+        android:id="@+id/nav_produccion"
+        android:name="com.balzhoyt.cafezh.muestras.ui.produccion.ProduccionFragment"
+        android:label="@string/mnu_produccion" />/>
+</navigation>
