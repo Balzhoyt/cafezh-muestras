@@ -17,10 +17,7 @@
 package com.balzhoyt.cafezh.muestras.fragmentsCamaraX
 
 import android.annotation.SuppressLint
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
+import android.content.*
 import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -61,10 +58,7 @@ import com.balzhoyt.cafezh.muestras.KEY_EVENT_ACTION
 import com.balzhoyt.cafezh.muestras.KEY_EVENT_EXTRA
 import com.balzhoyt.cafezh.muestras.CapturarFotoActivity
 import com.balzhoyt.cafezh.muestras.R
-import com.balzhoyt.cafezh.muestras.utils.ANIMATION_FAST_MILLIS
-import com.balzhoyt.cafezh.muestras.utils.ANIMATION_SLOW_MILLIS
-import com.balzhoyt.cafezh.muestras.utils.AutoFitPreviewBuilder
-import com.balzhoyt.cafezh.muestras.utils.simulateClick
+import com.balzhoyt.cafezh.muestras.utils.*
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.coroutines.Dispatchers
@@ -105,6 +99,7 @@ class CameraFragment : Fragment() {
     private var imageCapture: ImageCapture? = null
     private var imageAnalyzer: ImageAnalysis? = null
 
+
     /** Volume down button receiver used to trigger shutter */
     private val volumeDownReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -143,6 +138,7 @@ class CameraFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainExecutor = ContextCompat.getMainExecutor(requireContext())
+
     }
 
     override fun onResume() {
@@ -370,7 +366,7 @@ class CameraFragment : Fragment() {
         controls.findViewById<ImageButton>(R.id.camera_capture_button).setOnClickListener {
             // Get a stable reference of the modifiable image capture use case
             imageCapture?.let { imageCapture ->
-
+                guardarPreferencias(CapturarFotoActivity.getNombreArchivo())
                 // Create output file to hold the image
                 //val photoFile = createFile(outputDirectory, FILENAME, PHOTO_EXTENSION)
                 val photoFile = createFile(outputDirectory, CapturarFotoActivity.getNombreArchivo(), PHOTO_EXTENSION)
@@ -421,6 +417,8 @@ class CameraFragment : Fragment() {
                     CameraFragmentDirections.actionCameraToGallery(outputDirectory.absolutePath))
         }
     }
+
+
 
 
     /**
@@ -502,6 +500,21 @@ class CameraFragment : Fragment() {
                 // Call all listeners with new value
                 listeners.forEach { it(luma) }
             }
+        }
+
+
+    }
+    private fun guardarPreferencias(nombreArchivo: String) {
+        when(nombreArchivo){
+            "roya_"->{PrefsApp.prefs.c_roya=PrefsApp.prefs.c_roya+1}
+            "mancha_hierro_" ->{PrefsApp.prefs.c_mancha_hierro++}
+            "ojo_gallo_"->{PrefsApp.prefs.c_ojo_gallo++}
+            "deficit_azufre_" ->{PrefsApp.prefs.c_deficit_azufre++}
+            "deficit_nitrogeno_" ->{PrefsApp.prefs.c_deficit_nitrogeno++}
+            "deficit_fosforo_" ->{PrefsApp.prefs.c_deficit_fosforo++}
+            "deficit_magnesio_" ->{PrefsApp.prefs.c_deficit_magnesio++}
+            "hojas_sanas"->{PrefsApp.prefs.c_hojas_sanas++}
+            else -> {"n"}
         }
     }
 
