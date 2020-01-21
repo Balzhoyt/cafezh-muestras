@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 
 class Prefs (context: Context) {
-    val PREFS_NAME = "com.balzhoyt.cafezh.sharedpreferences"
+    val PREFS_NAME = "com.balzhoyt.cafezh.sharedpreferences_v1"
     val prefs: SharedPreferences = context.getSharedPreferences(PREFS_NAME, 0)
 
     var c_roya: Int

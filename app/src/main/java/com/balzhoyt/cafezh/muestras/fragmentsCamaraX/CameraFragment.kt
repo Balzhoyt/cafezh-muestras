@@ -506,14 +506,14 @@ class CameraFragment : Fragment() {
     }
     private fun guardarPreferencias(nombreArchivo: String) {
         when(nombreArchivo){
-            "roya_"->{PrefsApp.prefs.c_roya=PrefsApp.prefs.c_roya+1}
-            "mancha_hierro_" ->{PrefsApp.prefs.c_mancha_hierro++}
-            "ojo_gallo_"->{PrefsApp.prefs.c_ojo_gallo++}
-            "deficit_azufre_" ->{PrefsApp.prefs.c_deficit_azufre++}
-            "deficit_nitrogeno_" ->{PrefsApp.prefs.c_deficit_nitrogeno++}
-            "deficit_fosforo_" ->{PrefsApp.prefs.c_deficit_fosforo++}
-            "deficit_magnesio_" ->{PrefsApp.prefs.c_deficit_magnesio++}
-            "hojas_sanas"->{PrefsApp.prefs.c_hojas_sanas++}
+            "roya "->{PrefsApp.prefs.c_roya=PrefsApp.prefs.c_roya+1}
+            "mancha_hierro " ->{PrefsApp.prefs.c_mancha_hierro++}
+            "ojo_gallo "->{PrefsApp.prefs.c_ojo_gallo++}
+            "deficit_azufre " ->{PrefsApp.prefs.c_deficit_azufre++}
+            "deficit_nitrogeno " ->{PrefsApp.prefs.c_deficit_nitrogeno++}
+            "deficit_fosforo " ->{PrefsApp.prefs.c_deficit_fosforo++}
+            "deficit_magnesio " ->{PrefsApp.prefs.c_deficit_magnesio++}
+            "hojas_sanas "->{PrefsApp.prefs.c_hojas_sanas++}
             else -> {"n"}
         }
     }

@@ -15,8 +15,8 @@
   ~ limitations under the License.
   -->
 <resources>
-    <color name="colorPrimary">#FF3D00</color>
-    <color name="colorPrimaryDark">#FF3D00</color>
+    <color name="colorPrimary">#FF6F00</color>
+    <color name="colorPrimaryDark">#FF6F00</color>
     <color name="colorAccent">#FFC107</color>
     <color name="icActive">#FFFFFFFF</color>
     <color name="icFocused">#DDFFFFFF</color>

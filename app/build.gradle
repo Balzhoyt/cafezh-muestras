@@ -97,6 +97,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
     implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
+    implementation 'androidx.annotation:annotation:1.0.2'
     kapt 'com.github.bumptech.glide:compiler:4.10.0'
 
     // Unit testing
@@ -114,5 +115,15 @@ dependencies {
 
     //firebase
     implementation 'com.google.firebase:firebase-storage:16.0.4'
-    implementation 'com.google.firebase:firebase-auth:16.0.5'
+    //implementation 'com.google.firebase:firebase-auth:16.0.5'
+    //Firebase
+    implementation 'com.google.firebase:firebase-auth:16.1.0'
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.firebaseui:firebase-ui-auth:4.3.1'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    implementation 'com.google.firebase:firebase-firestore:17.1.2'
+
+    // imagen de perfil circular
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    //implementation 'com.google.firebase:firebase-database:19.2.0'
 }

@@ -85,14 +85,14 @@ class CapturarFotoActivity : AppCompatActivity() {
 
         fun getNombreArchivo():String {
             return  when(fotoURL) {
-                "Enfermedad Roya" -> {"roya_" }
-                "Enfermedad Mancha de Hierro" -> {"mancha_hierro_" }
-                "Enfermedad Ojo de Gallo" -> {"ojo_gallo_" }
-                "Deficit de Azufre" -> {"deficit_azufre_" }
-                "Deficit de Nitrogeno" -> {"deficit_nitrogeno_" }
-                "Deficit de Fosforo" -> {"deficit_fosforo_" }
-                "Deficit de Magnesio" -> {"deficit_magnesio_" }
-                "Hojas Sanas" -> {"hojas_sanas" }
+                "Enfermedad Roya" -> {"roya " }
+                "Enfermedad Mancha de Hierro" -> {"mancha_hierro " }
+                "Enfermedad Ojo de Gallo" -> {"ojo_gallo " }
+                "Deficit de Azufre" -> {"deficit_azufre " }
+                "Deficit de Nitrogeno" -> {"deficit_nitrogeno " }
+                "Deficit de Fosforo" -> {"deficit_fosforo " }
+                "Deficit de Magnesio" -> {"deficit_magnesio " }
+                "Hojas Sanas" -> {"hojas_sanas " }
                 else -> {"n"}
             }
         }

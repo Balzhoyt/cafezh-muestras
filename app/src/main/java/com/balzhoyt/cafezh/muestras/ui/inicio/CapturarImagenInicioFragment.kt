@@ -16,8 +16,16 @@ import com.balzhoyt.cafezh.muestras.CapturarFotoActivity
 import com.balzhoyt.cafezh.muestras.R
 import com.balzhoyt.cafezh.muestras.utils.PrefsApp
 import kotlinx.android.synthetic.main.fragment_inicio_capturas.*
+import android.os.Build.VERSION
+
+import android.os.Build.VERSION.SDK_INT
+
+
+
 
 class CapturarImagenInicioFragment : Fragment() {
+
+
 
     private lateinit var capturarImagenViewModel: CapturarImagenInicioViewModel
 
@@ -36,8 +44,11 @@ class CapturarImagenInicioFragment : Fragment() {
 
 
     ): View? {
-        capturarImagenViewModel =
-                ViewModelProviders.of(this).get(CapturarImagenInicioViewModel::class.java)
+
+
+
+        capturarImagenViewModel = ViewModelProviders.of(this).get(CapturarImagenInicioViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_inicio_capturas, container, false)
 
         val txtTotalHojaSana: TextView = root.findViewById(R.id.txtTotalHojaSana)
