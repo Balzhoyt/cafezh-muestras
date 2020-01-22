@@ -1,28 +1,13 @@
-# CameraXbasic
+# Cafezh muestras
+La aplicacion está principalmente dirigido a personal capacitado en el reconocimiento de enfermedades en las hojas de café. ya que el hará las capturas en base a su apreciación.
 
-CameraXbasic aims to demonstrate how to use CameraX APIs written in Kotlin.
+las capturas se guradarn en firebase, para posteriormente hacer un  modelo clasificador y reconocimiento de las enfermedades o deficiencias nutricionales, que se pudieran observar en los cafetales.
 
-## Build
-
-To build the app directly from the command line, run:
-```sh
-./gradlew assembleDebug
-```
-
-## Test
-
-Unit testing and instrumented device testing share the same code. To test the app using Robolectric, no device required, run:
-```sh
-./gradlew test
-```
-
-To run the same tests in an Android device connected via ADB, run:
-```sh
-./gradlew connectedAndroidTest
-```
-
-Alternatively, test running configurations can be added to Android Studio for convenience (and a nice UI). To do that:
-1. Go to: `Run` > `Edit Configurations` > `Add New Configuration`.
-1. For Robolectric select `Android JUnit`, for connected device select `Android Instrumented Tests`.
-1. Select `app` module and `com.android.example.cameraxbasic.MainInstrumentedTest` class.
-1. Optional: Give the run configuration a name, like `test robolectric` or `test device`
+## Enfermedades y deficiencas a muestrear
+1. Enfermedad Mancha de hierro
+1. Enfermedad Ojo de gallo
+1. Enfermedad Roya
+1. Déficit de Nitrogeno
+1. Déficit de Fosforo
+1. Déficit de Azufre
+1. Déficit de Magnesio
